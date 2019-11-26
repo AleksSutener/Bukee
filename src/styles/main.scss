@@ -65,7 +65,11 @@ h1, h2, h3, h4, h5, h6 {
     display: inline-block;
     padding: 13px 25px;
     border: none;
+    text-align: center;
     cursor: pointer;
+    &:focus {
+        outline: none;
+    }
     &_long {
         padding-left: 45px;
         padding-right: 45px;
@@ -82,6 +86,9 @@ h1, h2, h3, h4, h5, h6 {
         margin-top: 10px;
         text-align: center;
         margin-bottom: 80px;
+    }
+    &_gray {
+        background: $bg-light;
     }
 }
 
@@ -159,6 +166,50 @@ h1, h2, h3, h4, h5, h6 {
             margin-bottom: 0;
         }
     }
+}
+
+.form {
+    &-input {
+        width: 100%;
+        background: $bg-dark;
+        border-radius: 3px;
+        border: none;
+        height: 48px;
+        padding: 0 28px;
+        box-sizing: border-box;
+        color:$text-gray;
+        &:focus {
+            outline: none;
+        }
+    }
+    &__item {
+        margin-bottom: 20px;
+    }
+    &__btn {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+::-webkit-input-placeholder {
+    color: $text-gray;
+    opacity: 1;
+}
+
+::-moz-placeholder {
+    color: $text-gray;
+    opacity: 1;
+}
+
+:-moz-placeholder {
+    color: $text-gray;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    color: $text-gray;
+    opacity: 1;
 }
 
 /* Header */
@@ -272,7 +323,6 @@ h1, h2, h3, h4, h5, h6 {
 /* Contents */
 
 .contents {
-    background: $bg-light;
     padding: 150px 0 250px;
     &__inner {
         display: flex;
@@ -414,5 +464,76 @@ h1, h2, h3, h4, h5, h6 {
     &__inner {
         display: flex;
         justify-content: space-between;
+    }
+}
+
+/* Blog */
+
+.blog {
+    padding: 155px 0 160px;
+    text-align: center;
+    &-list {
+        display: flex;
+        justify-content: space-between;
+        text-align: left;
+        &-item {
+            flex-basis: 30%;
+            &__title {
+                color: $text-dark;
+                margin: 19px 0 6px;
+                letter-spacing: 0.05em;
+            }
+            &__img {
+                width: 369px;
+                height: 224px;
+                overflow: hidden;
+                position: relative;
+                img {
+                    position: absolute;
+                    width: 369px;
+                    height: 224px;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    object-fit: cover;
+                }
+            }
+            &__text {
+                color: #696980;
+                margin-top: 12px;
+            }
+            &__autor {
+                color: #80809b;
+                a {
+                    color: $accent-color;
+                }
+            }
+        }
+    }
+    &__list {
+        margin-bottom: 68px;
+    }
+    &__btn {
+        padding: 10px 31px;
+    }
+}
+
+/* Subscribe */
+
+.subscribe {
+    padding: 155px 0 150px;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item {
+        flex-basis: 49%;
+    }
+    &__text {
+        margin-top: 13px;
+        margin-bottom: 0;
+    }
+    &__form {
+        margin-top: 5px;
     }
 }
