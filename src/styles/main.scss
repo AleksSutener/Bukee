@@ -466,26 +466,26 @@ h1, h2, h3, h4, h5, h6 {
     &-slider {
         &__item {
             text-align: center;
-            padding-top: 7px;
+        }
+        &__wrap {
+            position: relative;
+            width: 152px;
+            margin: 0 auto;
+            i {
+                position: absolute;
+                color: $accent-color;
+                top: 0px;
+                right: -14px;
+                font-size: 48px;
+            }
         }
         &__photo {
             width: 152px;
             height: 152px;
             border-radius: 50%;
-            margin: 0 auto;
-            position: relative;
-            &_1 {
-                background: url('../img/slider-img-1.jpg');
-                background-repeat: no-repeat;
-                background-position: top center;
-            }
-            i {
-                display: block;
-                color: $accent-color;
-                font-size: 48px;
-                position: absolute;
-                top: -6px;
-                right: -13px;
+            overflow: hidden;
+            img {
+                width: 100%;
             }
         }
         &__title {
@@ -521,6 +521,9 @@ h1, h2, h3, h4, h5, h6 {
         padding: 0;
         font-size: 0;
         cursor: pointer;
+        &:focus {
+            outline: none;
+        }
     }
     .slick-active {
         button {
