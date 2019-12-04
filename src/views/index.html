@@ -36,37 +36,38 @@
                         <a href="#" class="header__logo">
                             <img src="img/logo.svg" alt="BUKEE">
                         </a>
-                        <nav>
-                            <ul class="header-list">
-                                <li class="header-list__item">
-                                    <a href="" class="header-list__link active">Home</a>
-                                </li>
-                                <li class="header-list__item">
-                                    <a href="" class="header-list__link">About</a>
-                                </li>
-                                <li class="header-list__item">
-                                    <a href="" class="header-list__link">Contents</a>
-                                </li>
-                                <li class="header-list__item">
-                                    <a href="" class="header-list__link">Books</a>
-                                </li>
-                                <li class="header-list__item">
-                                    <a href="" class="header-list__link">Education</a>
-                                </li>
-                                <li class="header-list__item">
-                                    <a href="" class="header-list__link">Skills</a>
-                                </li>
-                                <li class="header-list__item">
-                                    <a href="" class="header-list__link">Portfolio</a>
-                                </li>
-                                <li class="header-list__item">
-                                    <a href="" class="header-list__link">Clients</a>
-                                </li>
-                                <li class="header-list__item">
-                                    <a href="" class="header-list__link">Contact</a>
-                                </li>
-                            </ul>
-                        </nav>
+                        <ul class="header-list">
+                            <li class="header-list__item">
+                                <a href="" class="header-list__link active">Home</a>
+                            </li>
+                            <li class="header-list__item">
+                                <a href="" class="header-list__link">About</a>
+                            </li>
+                            <li class="header-list__item">
+                                <a href="" class="header-list__link">Contents</a>
+                            </li>
+                            <li class="header-list__item">
+                                <a href="" class="header-list__link">Books</a>
+                            </li>
+                            <li class="header-list__item">
+                                <a href="" class="header-list__link">Education</a>
+                            </li>
+                            <li class="header-list__item">
+                                <a href="" class="header-list__link">Skills</a>
+                            </li>
+                            <li class="header-list__item">
+                                <a href="" class="header-list__link">Portfolio</a>
+                            </li>
+                            <li class="header-list__item">
+                                <a href="" class="header-list__link">Clients</a>
+                            </li>
+                            <li class="header-list__item">
+                                <a href="" class="header-list__link">Contact</a>
+                            </li>
+                        </ul>
+                        <button class="menu-opener">
+                            <i class="fas fa-bars"></i>
+                        </button>
                     </div>
                     <div class="header__bottom">
                         <div class="block-book">
@@ -177,7 +178,19 @@
                             <li class="contents-list__item">Consectetur adipisicing elit</li>
                             <li class="contents-list__item">Labore et dolore magna</li>
                         </ol>
-                        <button class="btn btn_long contents__btn">More</button>
+                        <ol class="contents-list contents-list_next" style="display: none;">
+                            <li class="contents-list__item">Lorem ipsum dolor sit amet</li>
+                            <li class="contents-list__item">Consectetur adipisicing elit</li>
+                            <li class="contents-list__item">Labore et dolore magna</li>
+                            <li class="contents-list__item">Consectetur adipisicing elit</li>
+                            <li class="contents-list__item">Labore et dolore magna</li>
+                            <li class="contents-list__item">Lorem ipsum dolor sit amet</li>
+                            <li class="contents-list__item">Consectetur adipisicing elit</li>
+                            <li class="contents-list__item">Labore et dolore magna</li>
+                            <li class="contents-list__item">Consectetur adipisicing elit</li>
+                            <li class="contents-list__item">Labore et dolore magna</li>
+                        </ol>
+                        <button id="nextContent" class="btn btn_long contents__btn">More</button>
                     </div>
                 </div>
             </div>
@@ -236,7 +249,7 @@
                 <a href="#" class="btn other-books__btn">Browse all books</a>
             </div>
         </div>
-        <div class="comments page">
+        <div class="comments page page-slider">
             <div class="wrap">
                 <div class="comments-slider">
                     <div class="comments-slider__item">
@@ -289,6 +302,7 @@
                     </div>
                 </div>
             </div>
+            <svg class="comments__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 849"><path d="M-1 0l802 61 799-61v789l-799 60-802-60V0z" fill="#44444f" fill-rule="evenodd"/></svg>
         </div>
         <div class="page events">
             <div class="wrap">
@@ -337,13 +351,13 @@
                 <h2 class="h2 page__title">Latest from Blog</h2>
                 <p class="page__subtitle">Some of the latest posts from my personal blog</p>
                 <div class="blog-list blog__list">
-                    <div class="blog-list-item">
+                    <div class="blog-list-item blog-list__item">
                         <div class="blog-list-item__img">
                             <img src="img/blog-1.jpg" alt="Importance of light in photography">
                         </div>
                         <h4 class="h4 blog-list-item__title">Importance of light in photography</h4>
                         <div class="blog-list-item__autor">
-                            By <a href="#">Emma Anderson</a> - <a href="#">June 20, 2018</a>
+                            <span>By <a href="#">Emma Anderson</a> - </span><a href="#">June 20, 2018</a>
                         </div>
                         <p class="blog-list-item__text">
                             Lorem ipsum dolor sit amet, conse ctetur adipi scing elit, 
@@ -351,13 +365,13 @@
                             Quis ipsum suspendisse ultrices gravida. Risus commodo 
                         </p>
                     </div>
-                    <div class="blog-list-item">
+                    <div class="blog-list-item blog-list__item">
                         <div class="blog-list-item__img">
                             <img src="img/blog-2.jpg" alt="The tools you need for the perfection">
                         </div>
                         <h4 class="h4 blog-list-item__title">The tools you need for the perfection</h4>
                         <div class="blog-list-item__autor">
-                            By <a href="#">Emma Anderson</a> - <a href="#">June 25, 2018</a>
+                            <span>By <a href="#">Emma Anderson</a> - </span><a href="#">June 25, 2018</a>
                         </div>
                         <p class="blog-list-item__text">
                             Lorem ipsum dolor sit amet, conse ctetur adipi scing elit, 
@@ -365,13 +379,13 @@
                             Quis ipsum suspendisse ultrices gravida. Risus commodo 
                         </p>
                     </div>
-                    <div class="blog-list-item">
+                    <div class="blog-list-item blog-list__item">
                         <div class="blog-list-item__img">
                             <img src="img/blog-3.jpg" alt="Knowing the difference is important">
                         </div>
                         <h4 class="h4 blog-list-item__title">Knowing the difference is important</h4>
                         <div class="blog-list-item__autor">
-                            By <a href="#">Emma Anderson</a> - <a href="#">June 22, 2018</a>
+                            <span>By <a href="#">Emma Anderson</a> - </span><a href="#">June 22, 2018</a>
                         </div>
                         <p class="blog-list-item__text">
                             Lorem ipsum dolor sit amet, conse ctetur adipi scing elit, 
@@ -406,7 +420,7 @@
                 </div>
             </div>
         </div>
-        <div class="footer">
+        <div class="footer page">
             <div class="wrap">
                 <div class="footer-inner">
                     <div class="footer-inner__item">
@@ -460,6 +474,14 @@
                     slidesToScroll: 1,
                     arrows: false,
                     dots: true
+                });
+
+                $('.menu-opener').click(function() {
+                    $('.header-list').slideToggle(300);
+                });
+
+                $('#nextContent').click(function(){
+                    $('.contents-list_next').slideToggle(300);
                 });
             });
         </script>
